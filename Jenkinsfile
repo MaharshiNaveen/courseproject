@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    label 'upgrad-assignemt-3'
+    label 'course-project'
   }
   stages {
     stage('Git Checkout') {
