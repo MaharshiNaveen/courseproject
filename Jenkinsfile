@@ -15,6 +15,7 @@ pipeline {
           steps {
             sh 'sudo su'
             sh 'sudo docker build -t c3-courseproject .'
+sh 'sudo aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 263635808743.dkr.ecr.us-east-1.amazonaws.com'
           sh 'sudo docker tag assignment-3:latest 263635808743.dkr.ecr.us-east-1.amazonaws.com/assignment-3:${BUILD_NUMBER}'
           sh 'sudo docker push 263635808743.dkr.ecr.us-east-1.amazonaws.com/assignment-3:${BUILD_NUMBER}'      
           }
